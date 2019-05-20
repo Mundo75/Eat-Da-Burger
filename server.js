@@ -9,6 +9,8 @@ const PORT = process.env.PORT || 7572;
 
 let app = express();
 
+app.use(express.static("public"));
+
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");

@@ -4,8 +4,6 @@ const burger = require("../models/burger");
 
 let router = express.Router();
 
-let burger = require("../models/burger");
-
 router.get("/", function (req, res) {
 
     burger.getAll(function (data) {
