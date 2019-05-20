@@ -1,20 +1,14 @@
 body{
 
-    background-color:;
-
+    background-color:#333399;
     text-align: center;
+    padding-top: 40px;
+};
 
-    padding-top: 30px;
-
-}
-
-
-
-.burger-form > button[type=submit]{
-
+/* .burger-form > button[type=submit]{
     margin: 15px 0;
 
-}
+} */
 
 
 
@@ -36,8 +30,13 @@ body{
 
 
 
-h2{
-
+h1{
     color: #f30;
+    font-weight: bold;
 
+}
+
+p {
+    color:  white;
+    margin-top: 5px;
 }

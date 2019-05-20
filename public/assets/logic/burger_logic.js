@@ -50,7 +50,7 @@ $(function () {
 
             }).then(function () {
 
-                console.log("New burger has been added!");
+                console.log("New burger on Deck!");
 
                 location.reload();
 
