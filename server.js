@@ -3,13 +3,18 @@
 //express-handlebars
 const express = require("express");
 const exphbs = require("express-handlebars");
+const bodyParser = require("body-parser");
+
 
 const PORT = process.env.PORT || 7572;
 
 
 let app = express();
 
+
 app.use(express.static("public"));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
