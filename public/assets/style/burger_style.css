@@ -7,19 +7,21 @@ body{
 
 h1{
     color: #f30;
-    font-weight: bold;
+    font-family: 'Press Start 2P', cursive;
+    /* font-weight: bold; */
 
 }
 
-.burger-form > button[type=submit]{
+.gameForm > button[type=submit]{
     margin: 15px 0;
 
 } 
 
-
+.pull-right {
+    margin-top: 8px;
+}
 
 .well-burger{
-
     border-radius: 6px;
 
 }
@@ -27,18 +29,18 @@ h1{
 
 
 .well-burger > p{
-
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 32 px;
+    font-weight: bold;
     display: inline-block;
-
     margin: 7px 0;
-
 }
 
 
 
 
 
-p {
+#buttonText {
     color:  white;
     margin-top: 5px;
 }

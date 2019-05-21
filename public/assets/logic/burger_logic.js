@@ -20,7 +20,7 @@ $(function () {
 
         }).then(function () {
 
-            console.log("Burger devoured!");
+            console.log("Tasty Burger YUM!");
 
             location.reload();
 
@@ -30,7 +30,7 @@ $(function () {
 
 
 
-    $(".burger-form").on("submit", function (event) {
+    $(".gameForm").on("submit", function (event) {
 
         event.preventDefault();
 
@@ -38,7 +38,7 @@ $(function () {
 
         if (validateForm()) {
 
-            let newBurger = { burger_name: $("#burgerName").val().trim() };
+            let newBurger = { burger_name: $("#burgerType").val().trim() };
 
 
 
@@ -70,15 +70,15 @@ function validateForm() {
 
 
 
-    $(".form-group").removeClass("has-error");
+    $(".burgerForm").removeClass("has-error");
 
     $("#helpBlock").hide();
 
 
 
-    if ($("#burgerName").val() === "") {
+    if ($("#burgerType").val() === "") {
 
-        $("#burgerName").parent().addClass("has-error");
+        $("#burgerType").parent().addClass("has-error");
 
         $("#helpBlock").show();
 

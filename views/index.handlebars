@@ -4,7 +4,7 @@
 
         <div class="col-sm-12">
 
-            <img src="/assets/image/untitled.png" alt="burger image">
+            <img src="/assets/image/untitled.png" alt="burger pic">
 
             <h1>Eat-Da-Burger!</h1>
 
@@ -16,31 +16,35 @@
 
         <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 col-sm-6">
 
-            {{#each burgers}} {{#unless devoured}}
+            {{#each burgers}}
+            {{#unless devoured}}
 
             <div class="well well-sm well-burger">
 
-                <p>{{id}}. {{burger_name}}</p>
+                <p class="h2">{{id}}. {{burger_Name}}</p>
 
                 <button class="btn btn-danger btn-devour pull-right" data-id="{{id}}">Devour!</button>
 
             </div>
 
-            {{/unless}} {{/each}}
+            {{/unless}}
+            {{/each}}
 
         </div>
 
         <div class="col-lg-4 col-md-5 col-sm-6">
 
-            {{#each burgers}} {{#if devoured}}
+            {{#each burgers}}
+            {{#if devoured}}
 
-            <div class="well well-sm well-burger">
+            <div class="well well-sm well-burger" id="burgerMenu">
 
-                <p class="text-muted">{{id}}. {{burger_name}}</p>
+                <p class="h2">{{id}}. {{burger_Name}}</p>
 
             </div>
 
-            {{/if}} {{/each}}
+            {{/if}}
+            {{/each}}
 
         </div>
 
@@ -50,19 +54,19 @@
 
         <div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
 
-            <form class="burger-form">
+            <form class="gameForm">
 
-                <div class="form-group">
+                <div class="burgerForm">
 
-                    <input id="burgerName" type="text" class="form-control" placeholder="Burger" aria-describedby="helpBlock">
+                    <input id="burgerType" type="text" class="form-control" placeholder="Type Burger Here!" aria-describedby="helpBlock">
 
                     <span id="helpBlock" class="help-block" style="display:none;">Please enter a burger</span>
 
                 </div>
 
-                <button type="submit" class="btn btn-primary">Add Yer Favorite Burger!</button>
+                <button type="submit" class="btn btn-success"><strong>Add Yer Favorite Burger!</strong></button>
 
-                <p>Type in the name of the burger you want to devour and click the button</p>
+                <p id="buttonText">Type in the name of the burger you want to devour and click the button</p>
 
             </form>
 

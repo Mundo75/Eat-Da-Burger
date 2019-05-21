@@ -2,7 +2,6 @@
 //Declare dependencies, set up port (usable by Huroku), and set up express app with
 //express-handlebars
 const express = require("express");
-const exphbs = require("express-handlebars");
 const bodyParser = require("body-parser");
 
 
@@ -16,7 +15,10 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+app.use(express.urlencoded({ extended: true}));
+app.use(express.json());
 
+const exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
