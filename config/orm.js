@@ -7,7 +7,9 @@ let orm = {
 
         connection.query("SELECT * FROM ??", [tableName], function (error, result) {
 
-            if (error) throw error;
+            if (error) {
+                throw error;
+            };
 
             callback(result);
 
@@ -19,7 +21,9 @@ let orm = {
 
         connection.query("INSERT INTO ?? SET ?", [tableName, objectToInsert], function (error, result) {
 
-            if (error) throw error;
+            if (error) {
+                throw error;
+            };
 
             callback(result);
 
@@ -31,8 +35,10 @@ let orm = {
 
         connection.query("UPDATE ?? SET ? WHERE ?", [tableName, itemToUpdate, condition], function (error, result) {
 
-            if (error) throw error;
-
+            if (error) {
+                throw error;
+            };
+                
             callback(result);
 
         });
