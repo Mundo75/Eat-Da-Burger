@@ -11,10 +11,10 @@ let connection = mysql.createConnection({
 
     });
 
-connection.connect((error) => {
+connection.connect(function(err) {
 
-    if(error) {
-        console.error("Error connecting: " + error.stack);
+    if(err) {
+        console.error("Error connecting: " + err.stack);
         return;
    };
 
