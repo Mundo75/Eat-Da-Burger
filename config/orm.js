@@ -5,9 +5,9 @@ let orm = {
 
     selectAll: function (tableName, callback) {
 
-        connection.query("SELECT * FROM ??", [tableName], function (err, result) {
+        connection.query("SELECT * FROM ??", [tableName], function (error, result) {
 
-            if (err) throw err;
+            if (error) throw error;
 
             callback(result);
 
@@ -17,9 +17,9 @@ let orm = {
 
     insertOne: function (tableName, objectToInsert, callback) {
 
-        connection.query("INSERT INTO ?? SET ?", [tableName, objectToInsert], function (err, result) {
+        connection.query("INSERT INTO ?? SET ?", [tableName, objectToInsert], function (error, result) {
 
-            if (err) throw err;
+            if (error) throw err;
 
             callback(result);
 
@@ -29,9 +29,9 @@ let orm = {
 
     updateOne: function (tableName, itemToUpdate, condition, callback) {
 
-        connection.query("UPDATE ?? SET ? WHERE ?", [tableName, itemToUpdate, condition], function (err, result) {
+        connection.query("UPDATE ?? SET ? WHERE ?", [tableName, itemToUpdate, condition], function (error, result) {
 
-            if (err) throw err;
+            if (error) throw err;
 
             callback(result);
 
