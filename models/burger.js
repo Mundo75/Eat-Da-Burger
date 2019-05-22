@@ -20,8 +20,8 @@ let burger = {
 
     },
 
-    update: function (updateObject, conditionObject, callback) {
-        orm.updateOne("burgers", updateObject, conditionObject, function (result) {
+    update: function (update, condition, callback) {
+        orm.updateOne("burgers", update, condition, function (result) {
 
             callback(result);
 
