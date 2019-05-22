@@ -5,10 +5,10 @@ let orm = {
 
     selectAll: function (tableName, callback) {
 
-        connection.query("SELECT * FROM ??", [tableName], function (error, result) {
+        connection.query("SELECT * FROM ??", [tableName], function (err, result) {
 
-            if (error) {
-                throw error;
+            if (err) {
+                throw err;
             };
 
             callback(result);
@@ -19,10 +19,10 @@ let orm = {
 
     insertOne: function (tableName, objectToInsert, callback) {
 
-        connection.query("INSERT INTO ?? SET ?", [tableName, objectToInsert], function (error, result) {
+        connection.query("INSERT INTO ?? SET ?", [tableName, objectToInsert], function (err, result) {
 
-            if (error) {
-                throw error;
+            if (err) {
+                throw err;
             };
 
             callback(result);
@@ -33,10 +33,10 @@ let orm = {
 
     updateOne: function (tableName, itemToUpdate, condition, callback) {
 
-        connection.query("UPDATE ?? SET ? WHERE ?", [tableName, itemToUpdate, condition], function (error, result) {
+        connection.query("UPDATE ?? SET ? WHERE ?", [tableName, itemToUpdate, condition], function (err, result) {
 
-            if (error) {
-                throw error;
+            if (err) {
+                throw err;
             };
                 
             callback(result);
